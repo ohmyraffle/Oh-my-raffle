@@ -41,7 +41,7 @@ h2 {
   display: block;
   width: 100%;
   padding: 12px;
-  background-color: #d64c1f;
+  background-color: #E24A1B;
   color: white;
   border: none;
   border-radius: 6px;
@@ -50,7 +50,7 @@ h2 {
 }
 
 .btn-orange:hover {
-  background-color: #b53f1a;
+  background-color: #c13d17;
 }
 
 .apple-pay {
@@ -76,7 +76,7 @@ h2 {
 }
 
 .admin-login a {
-  color: #d64c1f;
+  color: #E24A1B;
   text-decoration: none;
   font-weight: bold;
 }
