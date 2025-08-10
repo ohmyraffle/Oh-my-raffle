@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oh My Raffle!</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo.png" type="image/png">
+  <meta name="theme-color" content="#E24B1A">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <img src="logo.png" alt="Oh My Raffle!" class="logo">
+    </div>
+    <nav class="tabs">
+      <button class="tab active" data-tab="create">Create</button>
+      <button class="tab" data-tab="sell">Sell</button>
+      <button class="tab" data-tab="dashboard">Dashboard</button>
+      <label class="admin-toggle">
+        <input type="checkbox" id="adminToggle"> Admin mode
+      </label>
+    </nav>
+  </header>
+
+  <main>
+    <section id="create" class="panel active">
+      <h2>Create a raffle</h2>
+      <form id="createForm">
+        <label>Title <input required name="title"></label>
+        <label>Description <textarea name="description" rows="3"></textarea></label>
+        <div class="grid">
+          <label>Ticket price (£) <input type="number" step="0.01" min="0" name="price" required></label>
+          <label>Ticket cap <input type="number" min="1" name="cap" required></label>
+        </div>
+        <label>End date/time <input type="datetime-local" name="endAt" required></label>
+        <button type="submit">Save raffle</button>
+      </form>
+      <div id="createMsg" class="msg"></div>
+      <h3>Existing raffles</h3>
+      <div id="raffleList"></div>
+    </section>
+
+    <section id="sell" class="panel">
+      <h2>Sell tickets</h2>
+      <form id="sellForm">
+        <label>Raffle <select id="sellRaffleSelect"></select></label>
+        <div class="grid">
+          <label>Buyer name <input required id="buyerName"></label>
+          <label>Email <input required type="email" id="buyerEmail"></label>
+        </div>
+        <label>Quantity <input required type="number" min="1" id="qty"></label>
+        <button type="submit">Add purchase</button>
+      </form>
+      <div id="sellMsg" class="msg"></div>
+      <div id="latestPurchases"></div>
+    </section>
+
+    <section id="dashboard" class="panel">
+      <h2>Dashboard</h2>
+      <label>Raffle <select id="dashRaffleSelect"></select></label>
+      <div id="dashSummary"></div>
+      <div id="entries"></div>
+      <div id="winnerBlock" class="hidden">
+        <h3>Winner</h3>
+        <div id="winnerCard"></div>
+      </div>
+      <div id="adminActions" class="admin-only hidden">
+        <button id="drawBtn">Draw winner</button>
+        <button id="exportEntriesBtn">Export entries CSV</button>
+        <button id="exportPurchasesBtn">Export purchases CSV</button>
+        <button id="resetWinnerBtn">Reset winner</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="y"></span> Oh My Raffle!</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
