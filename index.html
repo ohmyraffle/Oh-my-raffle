@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Oh My Raffle!</title>
 
-  <link rel="stylesheet" href="styles.css" />
+  <!-- RELATIVE path (no leading /) so it works no matter the site path -->
+  <link rel="stylesheet" href="styles.css?v=2" />
 
-  <!-- PWA setup -->
+  <!-- PWA -->
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#E24A1B">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -17,8 +18,8 @@
 <body>
 
   <header>
-    <!-- Root-relative path ensures it works on GitHub Pages project site -->
-    <img src="/oh-my-raffle/logo.png?v=6" alt="Oh My Raffle!" class="logo">
+    <!-- RELATIVE logo path -->
+    <img src="logo.png?v=7" alt="Oh My Raffle!" class="logo" />
     <h1 class="sr-only">Oh My Raffle!</h1>
   </header>
 
@@ -44,6 +45,7 @@
     </section>
   </main>
 
-  <script src="app.js"></script>
+  <!-- RELATIVE script path -->
+  <script src="app.js?v=2"></script>
 </body>
 </html>
