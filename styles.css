@@ -1,123 +1,52 @@
-/* Brand colors */
-:root {
-  --orange: #E24A1B; /* exact from logo */
-  --orange-dark: #c13d17;
-  --bg: #FAF6F1;
-  --ink: #333;
-  --card-bg: #fff;
-  --muted: #666;
-}
-
-/* Base */
+/* Reset defaults */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background-color: var(--bg);
-  margin: 0;
-  padding: 0;
-  color: var(--ink);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: white;
 }
 
-/* Full-width logo */
-header {
-  padding: 0;
-  margin: 0;
-}
+/* Logo full width */
 .logo {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-}
-@media (max-width: 768px) {
-  .logo { max-height: 160px; }
-}
-@media (min-width: 769px) {
-  .logo { max-height: 250px; }
-}
-
-/* Main section */
-main {
-  padding: 20px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-h2 {
-  font-size: 1.4rem;
-  margin-bottom: 20px;
-}
-
-/* Raffle cards */
-.raffle-card {
-  background: var(--card-bg);
-  border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-.raffle-card h3 {
-  margin-top: 0;
-}
-
-/* Orange buttons */
-.btn-orange {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  background-color: var(--orange);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-}
-.btn-orange:hover {
-  background-color: var(--orange-dark);
-}
-
-/* Apple Pay button */
-.apple-pay {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-}
-.apple-pay:hover {
-  background-color: #333;
-}
-
-/* Admin login link */
-.admin-login {
-  text-align: center;
-  margin-top: 20px;
-}
-.admin-login a {
-  color: var(--orange);
-  text-decoration: none;
-  font-weight: bold;
-}
-.admin-login a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 15px;
-  font-size: 0.9em;
-  color: var(--muted);
-}
-.logo {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
-    margin: 0 auto;
-    background:
+}
+
+/* Main content */
+main {
+    padding: 20px;
+}
+
+/* Competitions */
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.competition {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.competition h2 {
+    margin-top: 0;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #e94e1b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background: #cc3f14;
 }
