@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oh My Raffle! — Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">🎟️ Oh My Raffle!</div>
+    <nav class="tabs">
+      <button class="tab active" data-tab="create">Create</button>
+      <button class="tab" data-tab="sell">Sell</button>
+      <button class="tab" data-tab="dashboard">Dashboard</button>
+      <label class="admin-toggle">
+        <input type="checkbox" id="adminToggle"> Admin mode
+      </label>
+    </nav>
+  </header>
+
+  <main>
+    <section id="create" class="panel active">
+      <h2>Create a raffle</h2>
+      <form id="createForm">
+        <label>Title <input required name="title" placeholder="e.g., Summer Giveaway"></label>
+        <label>Description <textarea name="description" rows="3" placeholder="What’s in the prize?"></textarea></label>
+        <div class="grid">
+          <label>Ticket price (£) <input type="number" step="0.01" min="0" name="price" required value="2.50"></label>
+          <label>Ticket cap <input type="number" min="1" name="cap" required value="500"></label>
+        </div>
+        <label>End date/time <input type="datetime-local" name="endAt" required></label>
+        <button type="submit">Save raffle</button>
+      </form>
+      <div id="createMsg" class="msg"></div>
+      <h3>Existing raffles</h3>
+      <div id="raffleList"></div>
+    </section>
+
+    <section id="sell" class="panel">
+      <h2>Sell tickets</h2>
+      <form id="sellForm">
+        <label>Raffle
+          <select id="sellRaffleSelect"></select>
+        </label>
+        <div class="grid">
+          <label>Buyer name <input required id="buyerName" placeholder="Full name"></label>
+          <label>Email <input required type="email" id="buyerEmail" placeholder="email@example.com"></label>
+        </div>
+        <label>Quantity <input required type="number" min="1" max="100" id="qty" value="1"></label>
+        <button type="submit">Add purchase</button>
+      </form>
+      <div id="sellMsg" class="msg"></div>
+      <div id="latestPurchases"></div>
+    </section>
+
+    <section id="dashboard" class="panel">
+      <h2>Dashboard</h2>
+      <label>Raffle
+        <select id="dashRaffleSelect"></select>
+      </label>
+      <div id="dashSummary"></div>
+      <div id="entries"></div>
+      <div id="winnerBlock" class="hidden">
+        <h3>Winner</h3>
+        <div id="winnerCard"></div>
+      </div>
+      <div id="adminActions" class="admin-only hidden">
+        <button id="drawBtn">Draw winner</button>
+        <button id="exportEntriesBtn">Export entries CSV</button>
+        <button id="exportPurchasesBtn">Export purchases CSV</button>
+        <button id="resetWinnerBtn">Reset winner</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="y"></span> Oh My Raffle! — Prototype</footer>
+
+  <script src="app.js"></script>
