@@ -1,3 +1,4 @@
+/* General page styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,40 +7,28 @@ body {
   color: #333;
 }
 
-header {
-  text-align: center;
-}
-
+/* Logo styling */
 .logo {
+  display: block;
+  max-width: 300px; /* Change this to make the logo bigger or smaller */
   width: 100%;
   height: auto;
-  max-width: 800px; /* prevents it from being too huge on desktops */
-  display: block;
-  margin: 40px auto 20px auto; /* 40px top, 20px bottom spacing */
+  margin: 20px auto;
 }
 
-@media (max-width: 600px) {
-  .logo {
-    max-width: 90%; /* keeps margins on mobile */
-    margin: 20px auto; /* smaller spacing on mobile */
-  }
+/* Headings */
+h1, h2 {
+  text-align: center;
+  color: #000;
 }
 
-main {
-  padding: 0 20px;
-  margin-top: 40px; /* pushes competitions down */
-}
-
-h2 {
-  margin-bottom: 20px;
-}
-
+/* Competition cards */
 .competition {
   background: #fff;
   border-radius: 10px;
   padding: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .competition h3 {
@@ -47,14 +36,16 @@ h2 {
 }
 
 .competition button {
-  background-color: #e94e1b;
-  color: #fff;
+  background-color: #e94d1c;
+  color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 10px;
   border-radius: 5px;
   cursor: pointer;
+  width: 100%;
+  font-size: 16px;
 }
 
 .competition button:hover {
-  background-color: #d13f15;
+  background-color: #cc3f14;
 }
