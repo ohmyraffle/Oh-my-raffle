@@ -8,10 +8,18 @@ body {
 
 /* Logo full width */
 .logo {
-    display: block;
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
+  max-width: 800px; /* prevents it from becoming too large on wide screens */
+  display: block;
+  margin: 40px auto; /* centers horizontally and adds space top/bottom */
 }
+
+@media (max-width: 600px) {
+  .logo {
+    max-width: 90%; /* keeps margins on mobile */
+    margin: 20px auto; /* smaller spacing on mobile */
+  }
 
 /* Main content */
 main {
