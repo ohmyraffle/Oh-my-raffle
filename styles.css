@@ -1,18 +1,21 @@
-/* Reset defaults */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333;
 }
 
-/* Logo full width */
+header {
+  text-align: center;
+}
+
 .logo {
   width: 100%;
   height: auto;
-  max-width: 800px; /* prevents it from becoming too large on wide screens */
+  max-width: 800px; /* prevents it from being too huge on desktops */
   display: block;
-  margin: 40px auto; /* centers horizontally and adds space top/bottom */
+  margin: 40px auto 20px auto; /* 40px top, 20px bottom spacing */
 }
 
 @media (max-width: 600px) {
@@ -20,41 +23,38 @@ body {
     max-width: 90%; /* keeps margins on mobile */
     margin: 20px auto; /* smaller spacing on mobile */
   }
-
-/* Main content */
-main {
-    padding: 20px;
 }
 
-/* Competitions */
-h1 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
+main {
+  padding: 0 20px;
+  margin-top: 40px; /* pushes competitions down */
+}
+
+h2 {
+  margin-bottom: 20px;
 }
 
 .competition {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.competition h2 {
-    margin-top: 0;
+.competition h3 {
+  margin-top: 0;
 }
 
-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #e94e1b;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
+.competition button {
+  background-color: #e94e1b;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-button:hover {
-    background: #cc3f14;
+.competition button:hover {
+  background-color: #d13f15;
 }
