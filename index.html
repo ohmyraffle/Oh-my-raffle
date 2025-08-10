@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oh My Raffle!</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- PWA setup -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#E24A1B">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="apple-touch-icon" href="logo_192x192.png">
+</head>
+<body>
+
+  <header>
+    <!-- Root-relative path ensures it works on GitHub Pages project site -->
+    <img src="/oh-my-raffle/logo.png?v=6" alt="Oh My Raffle!" class="logo">
+    <h1 class="sr-only">Oh My Raffle!</h1>
+  </header>
+
+  <main>
+    <h2>Current Competitions</h2>
+
+    <section class="competition-card">
+      <h3>Luxury Watch Giveaway</h3>
+      <p>Enter for a chance to win a luxury timepiece.</p>
+      <button>Enter</button>
+    </section>
+
+    <section class="competition-card">
+      <h3>New Smartphone Contest</h3>
+      <p>Win the latest smartphone model.</p>
+      <button>Enter</button>
+    </section>
+
+    <section class="competition-card">
+      <h3>£500 Gift Card Raffle</h3>
+      <p>Enter to win a £500 gift card.</p>
+      <button>Enter</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
